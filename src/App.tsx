@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Grid } from '@mui/material'
+import ChallengeCard from './components/ChallengeCard'
+import MainAppBar from './components/MainAppBar'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <Container
+            maxWidth={false}
+            style={{ backgroundColor: 'black', padding: 0 }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <MainAppBar />
+            <Grid
+                container
+                justifyContent={'space-around'}
+                alignContent={'center'}
+            >
+                <ChallengeCard />
+            </Grid>
+        </Container>
+    )
 }
 
-export default App;
+export default App
